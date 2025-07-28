@@ -1,0 +1,104 @@
+<section id="view-car-content" aria-labelledby="model">
+    <script src="/pages/viewCar/script.js" type="module"></script>
+
+    <nav class="quick-nav" aria-label="In-page navigation">
+        <ul class="quick-nav-list">
+            <li class="quick-nav-item" id="to-hero">
+                <i class="fa-solid fa-circle-play fa-rotate-270" aria-hidden="true"></i>
+                <span>Intro</span>
+            </li>
+            <li class="quick-nav-item" id="to-overview">
+                <i class="fa-solid fa-comments" aria-hidden="true"></i>
+                <span>Overview</span>
+            </li>
+                <li class="quick-nav-item" id="to-gallery">
+                <i class="fa-solid fa-images" aria-hidden="true"></i>
+                <span>Gallery</span>
+            </li>
+            <li class="quick-nav-item" id="to-performance">
+                <i class="fa-solid fa-chart-simple" aria-hidden="true"></i>
+                <span>Performance</span>
+            </li>
+            <li class="quick-nav-item" id="to-specifications">
+                <i class="fa-solid fa-list" aria-hidden="true"></i>
+                <span>Specifications</span>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="section" id="hero">
+        <img src="" alt="Featured car hero image" id="hero-img">
+        <div class="hero-data">
+            <h2 id="make"></h2>
+            <h1 id="model"></h1>
+        </div>
+    </div>
+
+    <div class="section grid-macro-container" id="overview" aria-labelledby="overview-heading">
+        <div class="grid-header-container">
+            <h2 class="section-header" id="overview-heading">Overview</h2>
+        </div>
+
+        <div class="grid-content-container" id="overview-content">
+            <p id="overview-description"></p>
+        </div>
+    </div>
+
+    <div class="section grid-macro-container" id="gallery" aria-labelledby="gallery-heading">
+        <div class="grid-header-container">
+            <h2 class="section-header" id="gallery-heading">Image Gallery</h2>
+        </div>
+
+        <div class="grid-content-container" id="gallery-content">
+                <div class="gallery-controls" role="tablist" aria-label="Gallery view selection">
+                    <button type="button" class="gallery-control-button active" id="exterior-view" role="tab" aria-selected="true" aria-controls="exterior">
+                    Exterior
+                    </button>
+                    <button type="button" class="gallery-control-button" id="interior-view" role="tab" aria-selected="false" aria-controls="interior">
+                    Interior
+                    </button>
+                </div>
+
+            <div class="gallery-list" id="gallery-list">
+                <div class="gallery-container">
+                    <ul class="gallery-group exterior-shown" id="exterior" role="tabpanel" aria-labelledby="exterior-view">
+                    </ul>
+                    <ul class="gallery-group" id="interior" role="tabpanel" aria-labelledby="interior-view" hidden>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section grid-macro-container" id="performance" aria-labelledby="performance-heading">
+        <div class="grid-header-container">
+            <h2 class="section-header" id="performance-heading">Performance</h2>
+        </div>
+
+        <div class="grid-content-container" id="performance-content">
+            <ul id="performance-stats" role="list"></ul>
+            <div class="performance-overview-container">
+                <p id="performance-overview"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section grid-macro-container" id="specifications" aria-labelledby="specifications-heading">
+        <div class="grid-header-container">
+            <h2 class="section-header" id="specifications-heading">Specifications</h2>
+        </div>
+
+        <div class="grid-content-container" id="specifications-content">
+            <table id="specifications-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Metric</th>
+                        <th scope="col">Value</th>
+                        <th scope="col">Unit</th>
+                    </tr>
+                </thead>
+                <!-- tbody rows dynamically inserted -->
+            </table>
+        </div>
+    </div>
+</section>

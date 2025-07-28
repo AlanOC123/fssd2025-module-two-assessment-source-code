@@ -1,0 +1,15 @@
+:root {
+    --blur-soft: blur(8px);
+    --blur-medium: blur(16px);
+    --blur-heavy: blur(24px);
+    --blur-very-heavy: blur(24px);
+
+    --darken: brightness(50%);
+    --lighten: brightness(150%);
+
+    --move-up: translateY(-2px);
+
+    --shadow-very-light: 0 2px 8px 2px oklab(from var(--text) calc(l + 0.20) a b / 0.2);
+    --shadow-light: 0 8px 8px 4px oklab(from var(--text) calc(l + 0.10) a b / 0.4);
+    --text-shadow-light: 0px 2px 4px oklab(from var(--text) calc(l + 0.10) a b / 0.8);
+}

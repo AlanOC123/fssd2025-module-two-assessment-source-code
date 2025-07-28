@@ -1,0 +1,82 @@
+<section id="car-list-content">
+    <script src="/pages/carList/script.js" type="module"></script>
+
+    <aside aria-label="Brands Side Bar" id="brands-section" class="sidebar-section">
+        <div class="sidebar-control" id="brands">
+            <button type="button" aria-label="Toggle brand list">
+                <i class="fa-solid fa-car" aria-hidden="true"></i>
+                <span class="hidden">Cars</span>
+            </button>
+        </div>
+
+        <div class="card-container">
+            <ul id="brand-card-list" role="list">
+            <!-- dynamically populated <li> -->
+            </ul>
+        </div>
+    </aside>
+
+    <div id="cards-section" class="grid-macro-container">
+        <div class="grid-item">
+            <div id="car-cards-container">
+                <ul id="car-cards" role="list">
+                <!-- dynamically populated <li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <aside aria-label="Filter Side Bar" id="filters-section" class="sidebar-section">
+        <div class="sidebar-control" id="filters">
+            <button type="button" aria-label="Toggle filters">
+                <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+                <span class="hidden">Cars</span>
+            </button>
+        </div>
+
+        <div class="filters-container grid-macro-container">
+            <div class="grid-item">
+                <form class="filter-fields-container" id="filter-fields" aria-labelledby="filters-heading">
+                    <h2 id="filters-heading" class="visually-hidden">Filter Cars</h2>
+
+                    <div class="fields-container">
+                        <label for="brand-filter">Brands</label>
+                        <select name="brands" multiple size="5" id="brand-filter" class="filter-select" aria-describedby="brand-filter-desc">
+                            <option value="all">All</option>
+                        </select>
+                        <div id="brand-filter-desc" class="visually-hidden">Select one or more brands to filter</div>
+                    </div>
+
+                    <div class="fields-container">
+                        <label for="drive-system-filter">Transmission</label>
+                        <select name="transmission" multiple size="5" id="drive-system-filter" class="filter-select" aria-describedby="transmission-filter-desc">
+                            <option value="all">All</option>
+                        </select>
+                        <div id="transmission-filter-desc" class="visually-hidden">Select one or more transmission types</div>
+                    </div>
+
+                    <div class="fields-container" id="price-container">
+                        <label for="price-min">Price</label>
+                        <input type="range" name="price-min" id="price-min" aria-label="Minimum price">
+                        <input type="range" name="price-max" id="price-max" aria-label="Maximum price">
+
+                        <div id="progress-slider" aria-hidden="true">
+                            <div class="slider-thumb" id="min">
+                                <span class="tooltip">€<span>0</span></span>
+                            </div>
+                            <div class="slider-thumb" id="max">
+                                <span class="tooltip">€<span>0</span></span>
+                            </div>
+                            <div id="progress-track"></div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="filter-controls-container">
+                    <button form="filter-fields" type="submit" id="close-filters" aria-label="Close filters">Close</button>
+                    <button form="filter-fields" type="submit" id="apply-filters" aria-label="Apply filters to car list">Filter Cars</button>
+                </div>
+            </div>
+        </div>
+    </aside>
+</section>

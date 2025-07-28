@@ -1,0 +1,51 @@
+:root {
+  --base-clr: oklab(0.75 0.08 0.13);
+  --base-clr-80: oklab(0.75 0.08 0.13 / 0.8);
+  --base-clr-60: oklab(0.75 0.08 0.13 / 0.6);
+  --base-clr-40: oklab(0.75 0.08 0.13 / 0.4);
+  --base-clr-20: oklab(0.75 0.08 0.13 / 0.2);
+
+  --accent-1: oklab(from var(--base-clr) calc(l + 0.05) a b);
+  --accent-1-80: oklab(from var(--base-clr) calc(l + 0.05) a b);
+  --accent-1-60: oklab(from var(--base-clr) calc(l + 0.05) a b);
+  --accent-1-40: oklab(from var(--base-clr) calc(l + 0.05) a b);
+  --accent-1-20: oklab(from var(--base-clr) calc(l + 0.05) a b);
+
+  --accent-2: oklab(from var(--base-clr) l calc(a * 0.8) calc(b * 0.8));
+  --accent-2-80: oklab(from var(--base-clr) l calc(a * 0.8) calc(b * 0.8));
+  --accent-2-60: oklab(from var(--base-clr) l calc(a * 0.8) calc(b * 0.8));
+  --accent-2-40: oklab(from var(--base-clr) l calc(a * 0.8) calc(b * 0.8));
+  --accent-2-20: oklab(from var(--base-clr) l calc(a * 0.8) calc(b * 0.8));
+
+  --accent-3: oklab(from var(--base-clr) calc(l - 0.10) calc(a * 1.2) calc(b * 1.2));
+  --accent-3-80: oklab(from var(--base-clr) calc(l - 0.10) calc(a * 1.2) calc(b * 1.2));
+  --accent-3-60: oklab(from var(--base-clr) calc(l - 0.10) calc(a * 1.2) calc(b * 1.2));
+  --accent-3-40: oklab(from var(--base-clr) calc(l - 0.10) calc(a * 1.2) calc(b * 1.2));
+  --accent-3-20: oklab(from var(--base-clr) calc(l - 0.10) calc(a * 1.2) calc(b * 1.2));
+
+  --accent-transparent: oklab(from var(--base-clr) l a b / 0.2);
+
+  /* UI surfaces and backgrounds */
+  --bg-100: oklab(0.98 0 0);
+  --bg-80: oklab(0.98 0 0 / 0.8);             /* white */
+  --bg-60: oklab(0.98 0 0 / 0.6);             /* white */
+  --bg-40: oklab(0.98 0 0 / 0.4);             /* white */
+  --bg-20: oklab(0.98 0 0 / 0.2);            /* white */
+  --bg-0: oklab(0.98 0 0 / 0);            /* white */
+
+  --bg-contrast-100: oklab(0.02 0 0);
+  --bg-contrast-80: oklab(0.02 0 0 / 0.8);             /* white */
+  --bg-contrast-60: oklab(0.02 0 0 / 0.6);             /* white */
+  --bg-contrast-40: oklab(0.02 0 0 / 0.4);             /* white */
+  --bg-contrast-20: oklab(0.02 0 0 / 0.2);            /* white */
+  --bg-contrast-0: oklab(0.02 0 0 / 0);            /* white */
+
+  /* Text colors */
+  --text: oklab(0.18 0.01 -0.01);         /* dark charcoal */
+  --text-light: oklab(0.95 0 0);          /* soft white */
+
+  /* Status colors */
+  --success: oklab(0.7 -0.1 0.18);        /* mint green (≈ oklch 70% 0.16 145) */
+  --warning: oklab(0.8 0.15 0.1);         /* amber (≈ oklch 80% 0.2 85) */
+  --danger: oklab(0.65 0.18 0);           /* red-orange (≈ oklch 65% 0.2 30) */
+}

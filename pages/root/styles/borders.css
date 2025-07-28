@@ -1,0 +1,45 @@
+:root {
+    --border-thin: clamp(
+        calc(var(--fs-base-min) * 0.05),
+        calc(var(--fs-base-fluid) * 0.05),
+        calc(var(--fs-base-max) * 0.05)
+    );
+
+    --border-base: clamp(
+        calc(var(--fs-base-min) * 0.1),
+        calc(var(--fs-base-fluid) * 0.1),
+        calc(var(--fs-base-max) * 0.1)
+    );
+
+    --border-thick: clamp(
+        calc(var(--fs-base-min) * 0.2),
+        calc(var(--fs-base-fluid) * 0.2),
+        calc(var(--fs-base-max) * 0.2)
+    );
+
+    --radius-sm: clamp(
+        calc(var(--fs-base-min) * 0.25),
+        calc(var(--fs-base-fluid) * 0.25),
+        calc(var(--fs-base-max) * 0.25)
+    );
+
+    --radius-md: clamp(
+        calc(var(--fs-base-min) * 0.5),
+        calc(var(--fs-base-fluid) * 0.5),
+        calc(var(--fs-base-max) * 0.5)
+    );
+
+    --radius-lg: clamp(
+        calc(var(--fs-base-min) * 1),
+        calc(var(--fs-base-fluid) * 1),
+        calc(var(--fs-base-max) * 1)
+    );
+
+    --guide: 1px solid red;
+
+    --radius-sm: 8px;
+    --radius-base: 12px;
+    --radius-lg: 16px;
+    --radius-pill: 9999px;
+    --radius-circle: 50%;
+}

@@ -1,0 +1,73 @@
+:root {
+    --space-unit-min-fluid: 0.75rem;
+    --space-unit-max-fluid: 1.875rem;
+    --space-unit-base-fluid: calc(0.589rem + 0.804vw);
+
+    --space-unit-abs: 8px;
+    --space-xs-abs: calc(var(--space-unit-abs) * 0.25);
+    --space-sm-abs: calc(var(--space-unit-abs) * 0.5);
+    --space-md-abs: calc(var(--space-unit-abs) * 1.5);
+    --space-lg-abs: calc(var(--space-unit-abs) * 2);
+    --space-xl-abs: calc(var(--space-unit-abs) * 3);
+    --space-2xl-abs: calc(var(--space-unit-abs) * 4);
+    --space-3xl-abs: calc(var(--space-unit-abs) * 5);
+
+    --space-3xs-fluid: clamp(
+        calc(var(--space-unit-min-fluid) * 0.125),
+        calc(var(--space-unit-base-fluid) * 0.125),
+        calc(var(--space-unit-max-fluid) * 0.125)
+    );
+
+    --space-2xs-fluid: clamp(
+        calc(var(--space-unit-min-fluid) * 0.25),
+        calc(var(--space-unit-base-fluid) * 0.25),
+        calc(var(--space-unit-max-fluid) * 0.25)
+    );
+
+    --space-xs-fluid: clamp(
+        calc(var(--space-unit-min-fluid) * 0.5),
+        calc(var(--space-unit-base-fluid) * 0.5),
+        calc(var(--space-unit-max-fluid) * 0.5)
+    );
+
+    --space-sm-fluid: clamp(
+        calc(var(--space-unit-min-fluid) * 0.75),
+        calc(var(--space-unit-base-fluid) * 0.75),
+        calc(var(--space-unit-max-fluid) * 0.75)
+    );
+
+    --space-unit-fluid: clamp(
+        var(--space-unit-min-fluid),
+        var(--space-unit-base-fluid),
+        var(--space-unit-max-fluid)
+    );
+
+    --space-lg-fluid: clamp(
+        calc(var(--space-unit-min-fluid) * 1.5),
+        calc(var(--space-unit-base-fluid) * 1.5),
+        calc(var(--space-unit-max-fluid) * 1.5)
+    );
+
+    --space-xl-fluid: clamp(
+        calc(var(--space-unit-min-fluid) * 2),
+        calc(var(--space-unit-base-fluid) * 2),
+        calc(var(--space-unit-max-fluid) * 2)
+    );
+
+    --space-2xl-fluid: clamp(
+        calc(var(--space-unit-min-fluid) * 3),
+        calc(var(--space-unit-base-fluid) * 3),
+        calc(var(--space-unit-max-fluid) * 3)
+    );
+
+    --space-3xl-fluid: clamp(
+        calc(var(--space-unit-min-fluid) * 4),
+        calc(var(--space-unit-base-fluid) * 4),
+        calc(var(--space-unit-max-fluid) * 4)
+    );
+
+    --space-rhythm-xs: 0.5em;
+    --space-rhythm-sm: 1em;
+    --space-rhythm-md: 1.5em;
+    --space-rhythm-lg: 2em;
+}

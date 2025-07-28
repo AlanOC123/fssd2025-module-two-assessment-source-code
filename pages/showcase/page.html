@@ -1,0 +1,26 @@
+<section id="showcase-content" class="grid-macro-container" aria-label="Featured Cars">
+    <script src="/pages/showcase/script.js" type="module"></script>
+
+    <div class="grid-item">
+
+        <article id="carousel" aria-roledescription="carousel">
+            <div class="carousel-control-container">
+                <button class="carousel-control" id="prev" aria-label="Previous featured car">
+                    <i class="fa-solid fa-circle-left" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <ul id="featured-car" role="list">
+            <!-- dynamic <li> content -->
+            </ul>
+
+            <div class="carousel-control-container">
+                    <button class="carousel-control" id="next" aria-label="Next featured car">
+                        <i class="fa-solid fa-circle-right" aria-hidden="true"></i>
+                    </button>
+            </div>
+
+            <div id="progress-container" aria-hidden="true"></div>
+        </article>
+    </div>
+</section>

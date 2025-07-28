@@ -114,7 +114,7 @@ const brands = {
 }
 
 const getBrand = (key) => ({...brands[key]});
-const getImgDirPath = (make, model) => `/assets/carImages/${make}/${model}/`;
+const getImgDirPath = (make, model) => `./assets/carImages/${make}/${model}/`;
 
 const cars = [
     {

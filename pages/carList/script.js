@@ -478,6 +478,15 @@ const processFilters = (e) => {
         || pageData.filters.priceRange.max < high
     ) activeFilters.push('priceRange');
 
+    console.log(brand.selectedOptions);
+    console.log(driveSystem.selectedOptions);
+
+    selectedBrands.forEach(el => el.selected = false);
+    selectedDriveSystems.forEach(el => el.selected = false);
+
+    console.log(brand.selectedOptions);
+    console.log(driveSystem.selectedOptions);
+
     fillBrandCards();
 }
 

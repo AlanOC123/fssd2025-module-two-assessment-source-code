@@ -1,4 +1,3 @@
-import pageRouter from '../../../pageRouter.js';
 import navigationScript from '../nav/script.js'
 
 const DOMCache = {
@@ -26,7 +25,7 @@ export default {
         DOMCache.controlButton = document.getElementById('nav-control');
         DOMCache.currentSectionIndicator = document.getElementById('current-section');
 
-        const { controlButton, root } = DOMCache;
+        const { controlButton } = DOMCache;
         controlButton.addEventListener('click', navigationScript.toggleNavigation);
         setSectionIndicator();
     },

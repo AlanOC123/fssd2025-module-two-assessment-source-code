@@ -25,6 +25,7 @@ const imgEl = (imgPath) => {
 
     el.classList.add('car-image-container');
     img.src = imgPath;
+    img.alt = "Hero image for the selected car";
 
     el.append(img);
     return el

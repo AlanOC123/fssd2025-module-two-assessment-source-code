@@ -1,7 +1,7 @@
 const brands = {
     ferrari: {
         name: 'Ferrari',
-        logoPath: '/assets/logos/ferrari-logo.png',
+        logoPath: './assets/logos/ferrari-logo.png',
         brandClrs: {
             pri: '#E42528',
             sec: '#F8E823',
@@ -9,7 +9,7 @@ const brands = {
     },
     alpine: {
         name: 'Alpine',
-        logoPath: '/assets/logos/alpine-logo.png',
+        logoPath: './assets/logos/alpine-logo.png',
         brandClrs: {
             pri: '#E42528',
             sec: '#F8E823',
@@ -17,7 +17,7 @@ const brands = {
     },
     lamborghini: {
         name: 'Lamborghini',
-        logoPath: '/assets/logos/lamborghini-logo.png',
+        logoPath: './assets/logos/lamborghini-logo.png',
         brandClrs: {
             pri: '#E2DAC9',
             sec: '#B4A272',
@@ -25,7 +25,7 @@ const brands = {
     },
     mclaren: {
         name: 'McLaren',
-        logoPath: '/assets/logos/mclaren-logo.png',
+        logoPath: './assets/logos/mclaren-logo.png',
         brandClrs: {
             pri: '#FF8000',
             sec: '#000000',
@@ -33,7 +33,7 @@ const brands = {
     },
     'aston-martin': {
         name: 'Aston Martin',
-        logoPath: '/assets/logos/astonmartin-logo.png',
+        logoPath: './assets/logos/astonmartin-logo.png',
         brandClrs: {
             pri: '#037A68',
             sec: '#FFFFFF',
@@ -41,7 +41,7 @@ const brands = {
     },
     pininfarina: {
         name: 'Pininfarina',
-        logoPath: '/assets/logos/pininfarina-logo.png',
+        logoPath: './assets/logos/pininfarina-logo.png',
         brandClrs: {
             pri: '#00665e',
             sec: '#081427',
@@ -49,7 +49,7 @@ const brands = {
     },
     lotus: {
         name: 'Lotus',
-        logoPath: '/assets/logos/lotus-logo.png',
+        logoPath: './assets/logos/lotus-logo.png',
         brandClrs: {
             pri: '#ffff00',
             sec: '#101724',
@@ -57,7 +57,7 @@ const brands = {
     },
     bugatti: {
         name: 'Bugatti',
-        logoPath: '/assets/logos/bugatti-logo.png',
+        logoPath: './assets/logos/bugatti-logo.png',
         brandClrs: {
             pri: '#004bfa',
             sec: '#999999',
@@ -65,7 +65,7 @@ const brands = {
     },
     'redbull': {
         name: 'Red Bull',
-        logoPath: '/assets/logos/redbull-logo.png',
+        logoPath: './assets/logos/redbull-logo.png',
         brandClrs: {
             pri: '#db0a40',
             sec: '#0d2843',
@@ -73,7 +73,7 @@ const brands = {
     },
     zenvo: {
         name: 'Zenvo',
-        logoPath: '/assets/logos/zenvo-logo.png',
+        logoPath: './assets/logos/zenvo-logo.png',
         brandClrs: {
             pri: '#D0353B',
             sec: '#FFFFFF',
@@ -81,7 +81,7 @@ const brands = {
     },
     porsche: {
         name: 'Porsche',
-        logoPath: '/assets/logos/porsche-logo.png',
+        logoPath: './assets/logos/porsche-logo.png',
         brandClrs: {
             pri: '#B12B28',
             sec: '#404044',
@@ -89,7 +89,7 @@ const brands = {
     },
     bertone: {
         name: 'Bertone',
-        logoPath: '/assets/logos/bertone-logo.png',
+        logoPath: './assets/logos/bertone-logo.png',
         brandClrs: {
             pri: '#ff4409',
             sec: '#f3f0eb',
@@ -97,7 +97,7 @@ const brands = {
     },
     pagani: {
         name: 'Pagani',
-        logoPath: '/assets/logos/pagani-logo.png',
+        logoPath: './assets/logos/pagani-logo.png',
         brandClrs: {
             pri: '#ED3833',
             sec: '#000000',
@@ -105,7 +105,7 @@ const brands = {
     },
     rodin: {
         name: 'Rodin',
-        logoPath: '/assets/logos/rodin-logo.png',
+        logoPath: './assets/logos/rodin-logo.png',
         brandClrs: {
             pri: '#C2A76F',
             sec: '#FFFFFF',

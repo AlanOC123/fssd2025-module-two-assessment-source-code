@@ -16,6 +16,7 @@ const imgContainer = (logoPath) => {
 
     el.classList.add('brand-logo-container');
     img.src = logoPath;
+    img.alt = "Logo for the selected car"
 
     el.append(img);
     return el;

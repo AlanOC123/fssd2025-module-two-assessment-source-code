@@ -2,6 +2,7 @@ const cardImg = (src) => {
     const el = document.createElement('div');
     const img = document.createElement('img');
     img.src = src;
+    img.alt = "Gallery pictures fromt the interior and exterior of the car";
 
     el.classList.add('gallery-card-img-container');
 

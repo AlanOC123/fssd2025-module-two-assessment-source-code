@@ -1,57 +1,98 @@
-<div class="sitemap-container">
+<div class="sitemap-content grid-macro-container">
     <h1>Supercar Showcase Sitemap</h1>
 
     <section class="grid-item">
-        <h2><a href="/">Start Page</a></h2>
-        <ul>
-            <li>Landing view with Explore button</li>
-        </ul>
+        <h2>Start Page</h2>
+            <div class="content-container">
+                <h3>About the Page</h3>
+                <p class="section-description">
+                    The landing page contains the websites main logo and a button to start the app. The landing page contains a carousel which smoothly switches between images every 15 seconds.
+                </p>
+            </div>
+
+            <div class="content-container">
+                <h3>Page Structure</h3>
+                <ul>
+                    <li>Landing view with <a href="" id="explore-featured">Explore button</a></li>
+                </ul>
+            </div>
+            <button class="site-map-nav-button" type="button" id="to-start">Back to Start</button>
     </section>
 
     <section class="grid-item">
-        <h2><a href="/showcase">/showcase</a></h2>
-        <ul>
-            <li>Featured Cars</li>
-            <li>Interactive Carousel</li>
-        </ul>
+        <h2>Featured Cars</h2>
+        <div class="content-container">
+            <h3>About the Page</h3>
+            <p class="section-description">
+                This section selects three featured cars from the list and displays them in a carousel with 10 second intervals. Each section contains a button to view the car in more detail.
+            </p>
+        </div>
+
+        <div class="content-container">
+            <h3>Page Structure</h3>
+            <ul>
+                <li>Interactive Carousel</li>
+            </ul>
+        </div>
+        <button type="button" id="to-featured-cars">See Featured Cars</button>
     </section>
 
     <section class="grid-item">
-        <h2><code>/view-car/:make/:model</code></h2>
-        <ul>
-            <li>Intro</li>
-            <li>Overview</li>
-            <li>Gallery (Interior / Exterior)</li>
-            <li>Performance</li>
-            <li>Specifications</li>
-        </ul>
+        <h2>View Car</h2>
+        <div class="content-container">
+        <h3>About the Page</h3>
+            <p class="section-description">
+                When selecting a car, this page takes the data from the selected car and generates the content dynamically. The layout was largely inspired from the <a href="http://www.astonmartin.com">Aston Martin Website</a>. All Statistics were gathered from the cars official websites or articles based on the car from the likes of Top Gear. The majority of the information is from the official website.
+            </p>
+        </div>
+        <div class="content-container">
+            <h3>Page Structure</h3>
+            <ul>
+                <li>Intro</li>
+                <li>Overview</li>
+                <li>Gallery (Interior / Exterior)</li>
+                <li>Performance</li>
+                <li>Specifications</li>
+            </ul>
+        </div>
+        <button class="site-map-nav-button" type="button" id="to-view-car">View A Random Car</button>
     </section>
 
     <section class="grid-item">
-        <h2><a href="/car-list">/car-list</a></h2>
-        <ul>
-            <li>Brand Sidebar</li>
-            <li>Filter Panel (Brand, Transmission, Price)</li>
-            <li>Car Cards Grid</li>
-        </ul>
+        <h2>Car List</h2>
+        <div class="content-container">
+            <h3>About the Page</h3>
+            <p class="section-description">
+                This section is where you primarily find and explore cars. On larger devices the brand sidebar is visible always. On smaller devices, click the car icon to view the available brands. Where no brands are within the filter range, click the button to open the filters panel. Speaking of, click the button on the left to open this at anytime. You can filter by brand, drive system or price range. Brand and drive system filters are reset automatically. To select multiple brands or drive systems, hold CMD (Mac) or CNTRL (Windows) and click the brand. Slide the price range sliders into place to filter by price. The left one is the minimum value and right the maximum value. If you would like to suggest more filters, email me <a href="mailto:alan.oc1995@gmail.com">here,</a>
+            </p>
+        </div>
+        <div class="content-container">
+            <h3>Page Structure</h3>
+            <ul>
+                <li>Brand Sidebar</li>
+                <li>Filter Panel (Brand, Transmission, Price)</li>
+                <li>Car Cards Grid</li>
+            </ul>
+        </div>
+        <button class="site-map-nav-button" type="button" id="to-car-list">Find a Car</button>
     </section>
 
     <section class="grid-item">
-        <h2><a href="/about">/about</a></h2>
-        <ul>
-            <li>Purpose & Audience</li>
-            <li>Design Philosophy</li>
-            <li>Motorsport Audience Focus</li>
-            <li>Roadmap & Vision</li>
-        </ul>
-    </section>
-
-    <section class="grid-item">
-        <h2>Assets</h2>
-        <ul>
-            <li><code>/assets/carImages/{make}/{model}/</code></li>
-            <li><code>/assets/logos/</code></li>
-            <li><code>/assets/backgrounds/</code></li>
-        </ul>
+      <h2>About</h2>
+        <div class="content-container">
+            <h3>About the Page</h3>
+            <p class="section-description">
+                The about section descibred my thought process designing the website. Its more or less my thoughts on paper. It was also a section for me to focus on delivering a clean, text heavy section thats easy on the eyes.
+            </p>
+        </div>
+        <div class="content-container">
+            <h3>Page Structure</h3>
+            <ul>
+                <li>Purpose & Audience</li>
+                <li>Audience</li>
+                <li>Design Philosophy</li>
+            </ul>
+        </div>
+        <button class="site-map-nav-button" type="button" id="to-about">See My Ramblings</button>
     </section>
 </div>

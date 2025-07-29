@@ -36,7 +36,7 @@ const toAbout = () => {
 }
 
 const toSiteMap = () => {
-    pageRouter.loadPage('site-map');
+    // pageRouter.loadPage('site-map');
 }
 
 export default {

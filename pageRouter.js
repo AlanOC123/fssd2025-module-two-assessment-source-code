@@ -1,12 +1,13 @@
 const app = document.getElementById('main-content');
 
 let activeModules = [];
+let currScripts = [];
 
 const router = {
     'start': {
         type: 'ref',
         components: [
-            { key: 'start-content', order: 1 },
+            { key: 'startContent', order: 1 },
             { key: 'script', order: 2 },
         ]
     },
@@ -16,7 +17,7 @@ const router = {
             { key: 'root', order: 1 },
             { key: 'nav', order: 2 },
             { key: 'header', order: 3 },
-            { key: 'showcase-content', order: 4 },
+            { key: 'showcaseContent', order: 4 },
             { key: 'footer', order: 5 },
             { key: 'script', order: 6 }
         ]
@@ -54,22 +55,11 @@ const router = {
             { key: 'script', order: 6 },
         ]
     },
-    'site-map': {
-        type: 'ref',
-        components: [
-            { key: 'root', order: 1 },
-            { key: 'nav', order: 2 },
-            { key: 'header', order: 3 },
-            { key: 'site-map-content', order: 4 },
-            { key: 'footer', order: 5 },
-            { key: 'script', order: 6 },
-        ]
-    },
-    'start-content': {
+    'startContent': {
         type: 'end',
         path: './pages/start/',
     },
-    'showcase-content': {
+    'showcaseContent': {
         type: 'end',
         path: './pages/showcase/',
     },
@@ -84,10 +74,6 @@ const router = {
     'about-content': {
         type: 'end',
         path: './pages/about/',
-    },
-    'site-map-content': {
-        type: 'end',
-        path: './pages/siteMap/',
     },
     'header': {
         type: 'end',
@@ -149,6 +135,7 @@ const createTemplateNode = async (html) => {
 
 const executeScripts = (node) => {
     const scripts = node.querySelectorAll('script');
+
     scripts.forEach(oldScript => {
         const newScript = document.createElement('script');
 
@@ -164,8 +151,9 @@ const executeScripts = (node) => {
             newScript.type = 'text/javascript';
         }
 
+        currScripts.push(newScript);
         document.body.append(newScript);
-        oldScript.remove();
+        node.removeChild(oldScript);
     });
 }
 
@@ -177,6 +165,7 @@ const clearActiveModules = () => {
         }
     }
 
+    currScripts.forEach(script => document.body.removeChild(script));
     return [];
 }
 
@@ -235,7 +224,8 @@ const appendNodesToRoot = async (root, nodes) => {
 }
 
 const loadPage = async (key) => {
-    activeModules = clearActiveModules();
+    console.log(1);
+    currScripts = activeModules = clearActiveModules();
     clearRoot();
 
     let startPoint = router[key];

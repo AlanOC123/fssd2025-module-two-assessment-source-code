@@ -31,6 +31,10 @@ const toCarList = () => {
     pageRouter.loadPage('car-list');
 }
 
+const toAbout = () => {
+    pageRouter.loadPage('about');
+}
+
 export default {
     init:() => {
         DOMCache.root = document.querySelector('aside');
@@ -50,6 +54,7 @@ export default {
         featuredCars.addEventListener('click', toFeaturedCars);
         viewCars.addEventListener('click', toCarList);
         exitApp.addEventListener('click', toStart);
+        about.addEventListener('click', toAbout);
     },
     teardown: () => {
 

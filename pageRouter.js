@@ -43,6 +43,28 @@ const router = {
             { key: 'script', order: 6 },
         ]
     },
+    'about': {
+        type: 'ref',
+        components: [
+            { key: 'root', order: 1 },
+            { key: 'nav', order: 2 },
+            { key: 'header', order: 3 },
+            { key: 'about-content', order: 4 },
+            { key: 'footer', order: 5 },
+            { key: 'script', order: 6 },
+        ]
+    },
+    'site-map': {
+        type: 'ref',
+        components: [
+            { key: 'root', order: 1 },
+            { key: 'nav', order: 2 },
+            { key: 'header', order: 3 },
+            { key: 'site-map-content', order: 4 },
+            { key: 'footer', order: 5 },
+            { key: 'script', order: 6 },
+        ]
+    },
     'startContent': {
         type: 'end',
         path: './pages/start/',
@@ -58,6 +80,14 @@ const router = {
     'car-list-content': {
         type: 'end',
         path: './pages/carList/',
+    },
+    'about-content': {
+        type: 'end',
+        path: './pages/about/',
+    },
+    'site-map-content': {
+        type: 'end',
+        path: './pages/siteMap/',
     },
     'header': {
         type: 'end',

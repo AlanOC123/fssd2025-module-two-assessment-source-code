@@ -13,19 +13,19 @@ const state = {
 }
 
 const backgrounds = [
-  '../assets/backgrounds/bg-1.jpg',
-  '../assets/backgrounds/bg-2.jpg',
-  '../assets/backgrounds/bg-3.jpg',
-  '../assets/backgrounds/bg-4.jpg',
-  '../assets/backgrounds/bg-5.jpg',
-  '../assets/backgrounds/bg-6.jpg',
-  '../assets/backgrounds/bg-7.jpg',
-  '../assets/backgrounds/bg-8.jpg',
-  '../assets/backgrounds/bg-9.jpg',
-  '../assets/backgrounds/bg-10.jpg',
-  '../assets/backgrounds/bg-11.jpg',
-  '../assets/backgrounds/bg-12.jpg',
-]
+  './assets/backgrounds/bg-1.jpg',
+  './assets/backgrounds/bg-2.jpg',
+  './assets/backgrounds/bg-3.jpg',
+  './assets/backgrounds/bg-4.jpg',
+  './assets/backgrounds/bg-5.jpg',
+  './assets/backgrounds/bg-6.jpg',
+  './assets/backgrounds/bg-7.jpg',
+  './assets/backgrounds/bg-8.jpg',
+  './assets/backgrounds/bg-9.jpg',
+  './assets/backgrounds/bg-10.jpg',
+  './assets/backgrounds/bg-11.jpg',
+  './assets/backgrounds/bg-12.jpg',
+];
 
 const setBackground = (el, src) => {
     el.style.backgroundImage = `url(${src})`;

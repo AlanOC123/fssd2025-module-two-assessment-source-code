@@ -332,8 +332,8 @@ const cars = [
             engineSize: 6000,
             transmission: '7‑Speed Dual‑Clutch',
             driveSystem: 'All Wheel Drive',
-            len: null,
-            width: null
+            len: 4836,
+            width: 2020
         },
         generalOverview: 'The Zenvo Aurora hypercar prototype is set to debut at Goodwood 2025. Danish-engineered, it delivers near-Formula 1 performance and bold aesthetics in a limited-run production.',
         performanceOverview: 'Expected to deliver ~1,850 hp from a hybrid V12 platform, with acceleration near 2.0 s and top speeds around ~330 km/h. Aurora represents extreme European craftsmanship and cutting-edge hybrid power.'
@@ -354,8 +354,8 @@ const cars = [
             engineSize: 4000,
             transmission: '7‑Speed Dual‑Clutch',
             driveSystem: 'All Wheel Drive',
-            len: null,
-            width: null
+            len: 5100,
+            width: 2000
         },
         generalOverview: 'Based on Porsche’s 499P Le Mans Hypercar, the 499P‑Road is the road homologation variant launching in 2025—combining race-derived hybrid tech with road usability.',
         performanceOverview: 'Expected to feature ~900 hp hybrid drivetrain derived from WEC 499P, 0‑100 km/h in ~2.6 s, top speed around 340 km/h, plus active aero and track-level dynamics.'
@@ -411,8 +411,8 @@ const cars = [
         performance: {
             weight: 698,
             power: 1175,
-            speed: null,
-            acceleration: null,
+            speed: 360,
+            acceleration: 1.5,
         },
         info: {
             price: 1800000,
@@ -420,8 +420,8 @@ const cars = [
             engineSize: 4000,
             transmission: 'Sequential',
             driveSystem: 'Rear Wheel Drive',
-            len: null,
-            width: null,
+            len: 5500,
+            width: 2200,
         },
         generalOverview: 'Rodin Cars (New Zealand/UK) FZERO is an ultra‑lightweight hybrid hypercar aimed at track supremacy—claiming to lap ~7 seconds quicker than an F1 car around Albert Park. Built in limited numbers using 3D‑printed titanium and composites.',
         performanceOverview: 'Featuring a ~4.0 L hybrid V10, about 1,175 hp and just ~698 kg, the FZERO delivers brutally efficient power and aerodynamic prowess—making it one of the most extreme performance machines of 2025.'

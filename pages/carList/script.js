@@ -85,10 +85,6 @@ const expandSideBar = (e) => {
     if (buttonPressed.id === 'filters') fillTrack();
 }
 
-const filterBrands = (filtersArr) => {
-    return []
-}
-
 const clearBrandList = () => {
     const { cardList } = DOMCache.brandSideBar;
     cardList.innerHTML = "";
@@ -223,10 +219,12 @@ const fillBrandCards = () => {
 
         brand['background'] = background;
 
-        card.addEventListener('click', () => {
+        card.addEventListener('click', (e) => {
             const { brandName } = card.dataset;
             const { activeBrands } = pageData.filters;
             pageData.activeBrand = activeBrands.find(brand => brand.name === brandName);
+            const sidebar = e.target.closest('.sidebar-section');
+            sidebar.classList.remove('expand');
             fillCarsCards();
         })
 
@@ -387,7 +385,7 @@ const updatePriceRangeFromClick = (e) => {
 
     targetThumb.style.left = `${x}px`;
 
-    const { min, max } = DOMCache.filtersSideBar.price;
+    const { min } = DOMCache.filtersSideBar.price;
     const { high, low, range } = pageData.baseValues.priceRange;
 
     const leftPos = thumbMin.offsetLeft;
@@ -440,6 +438,40 @@ const resetFilter = () => {
     pageData.activeFilters = [];
 }
 
+const processSelectOptions = (options) => {
+    const allOptions = [];
+
+    let defaultOption = null;
+
+    for (let i = 0; i < options.length; i++) {
+        const option = options[i];
+        if (option.value === 'all') {
+            defaultOption = option;
+            continue;
+        }
+
+        if (option.selected) {
+            allOptions.push(option);
+        }
+    }
+
+    if (allOptions.length > 0) defaultOption.selected = false;
+    else allOptions.push(defaultOption);
+    return allOptions;
+}
+
+const setDefaultOption = (options) => {
+    for (let i = 0; i < options.length; i++) {
+        const option = options[i];
+
+        if (option.value === 'all') {
+            option.selected = true;
+        } else {
+            option.selected = false;
+        }
+    }
+}
+
 const processFilters = (e) => {
     e.preventDefault();
     const { root: brand } = DOMCache.filtersSideBar.brandSelect;
@@ -448,8 +480,11 @@ const processFilters = (e) => {
 
     resetFilter();
 
-    const selectedBrands = Array.from(brand.selectedOptions);
-    const selectedDriveSystems = Array.from(driveSystem.selectedOptions);
+    const selectedBrands = processSelectOptions(brand.options);
+    const selectedDriveSystems = processSelectOptions(driveSystem.options);
+
+    console.log(selectedBrands);
+    console.log(selectedDriveSystems);
 
     const [ minVal, maxVal ] = [min, max].map(el => el.value);
 
@@ -478,14 +513,8 @@ const processFilters = (e) => {
         || pageData.filters.priceRange.max < high
     ) activeFilters.push('priceRange');
 
-    console.log(brand.selectedOptions);
-    console.log(driveSystem.selectedOptions);
-
-    selectedBrands.forEach(el => el.selected = false);
-    selectedDriveSystems.forEach(el => el.selected = false);
-
-    console.log(brand.selectedOptions);
-    console.log(driveSystem.selectedOptions);
+    setDefaultOption(brand.options);
+    setDefaultOption(driveSystem.options);
 
     fillBrandCards();
 }
@@ -527,7 +556,7 @@ export default {
         const { controlButtons, price } = DOMCache.filtersSideBar;
         const { apply, close } = controlButtons;
 
-        const { slider, thumbMin, thumbMax, min, max } = price;
+        const { slider, thumbMin, thumbMax } = price;
 
         slider.addEventListener('click', updatePriceRangeFromClick);
         thumbMin.addEventListener('pointerdown', updatePriceRangeFromDrag);
@@ -537,14 +566,12 @@ export default {
        close.addEventListener('click', closeSideBar);
        apply.addEventListener('click', processFilters);
 
-
         initCars();
         initBrands();
         initPriceRange();
         initDriveSystem();
 
         fillBrandCards();
-        // fillCarsCards();
         fillBrandSelect();
         fillDriveSystemSelect();
     },

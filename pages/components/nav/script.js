@@ -36,7 +36,7 @@ const toAbout = () => {
 }
 
 const toSiteMap = () => {
-    // pageRouter.loadPage('site-map');
+    pageRouter.loadPage('site-map');
 }
 
 export default {
@@ -45,11 +45,11 @@ export default {
         DOMCache.navigation = document.querySelector('nav');
 
         DOMCache.navButtons.closeNav = document.getElementById('close-nav');
-        DOMCache.navButtons.featuredCars = document.getElementById('featured-cars');
-        DOMCache.navButtons.viewCars = document.getElementById('view-cars');
-        DOMCache.navButtons.about = document.getElementById('about');
-        DOMCache.navButtons.siteMap = document.getElementById('site-map');
-        DOMCache.navButtons.exitApp = document.getElementById('exit-app');
+        DOMCache.navButtons.featuredCars = document.getElementById('to-featured-cars');
+        DOMCache.navButtons.viewCars = document.getElementById('to-view-cars');
+        DOMCache.navButtons.about = document.getElementById('to-about-page');
+        DOMCache.navButtons.siteMap = document.getElementById('to-site-map');
+        DOMCache.navButtons.exitApp = document.getElementById('to-exit-app');
 
         const { navButtons } = DOMCache;
         const { closeNav, featuredCars, viewCars, about, siteMap, exitApp } = navButtons;

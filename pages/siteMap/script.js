@@ -1,6 +1,6 @@
 import pageRouter from '../../pageRouter.js';
-import carList from '../../data/carsList.js';
 import viewCarPageScript from '../viewCar/script.js';
+import carList from '../../data/carsList.js';
 
 const DOMCache = {
     controlButtons: null,
@@ -8,20 +8,20 @@ const DOMCache = {
 
 const navigateAway = (e) => {
     const map = {
-        'to-start': () => pageRouter.loadPage('start'),
-        'to-featured-cars': () => pageRouter.loadPage('showcase'),
-        'to-view-car': () => {
-            const [ car ] = carList[Math.floor(Math.random() * carList.length)];
+        'site-map-to-start': () => pageRouter.loadPage('start'),
+        'site-map-to-featured-cars': () => pageRouter.loadPage('showcase'),
+        'site-map-to-view-car': () => {
+            const car = carList[Math.floor(Math.random() * carList.length)];
             viewCarPageScript.viewManager.setCurr(car);
             pageRouter.loadPage('view-car')
         },
-        'to-car-list': () => pageRouter.loadPage('car-list'),
-        'to-about': () => pageRouter.loadPage('about'),
+        'site-map-to-car-list': () => pageRouter.loadPage('car-list'),
+        'site-map-to-about': () => pageRouter.loadPage('about'),
     }
 
     const { id } = e.target;
     const navHandler = map[id];
-    console.log(navHandler);
+    navHandler();
 }
 
 export default {

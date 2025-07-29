@@ -6,7 +6,7 @@ const router = {
     'start': {
         type: 'ref',
         components: [
-            { key: 'startContent', order: 1 },
+            { key: 'start-content', order: 1 },
             { key: 'script', order: 2 },
         ]
     },
@@ -16,7 +16,7 @@ const router = {
             { key: 'root', order: 1 },
             { key: 'nav', order: 2 },
             { key: 'header', order: 3 },
-            { key: 'showcaseContent', order: 4 },
+            { key: 'showcase-content', order: 4 },
             { key: 'footer', order: 5 },
             { key: 'script', order: 6 }
         ]
@@ -65,11 +65,11 @@ const router = {
             { key: 'script', order: 6 },
         ]
     },
-    'startContent': {
+    'start-content': {
         type: 'end',
         path: './pages/start/',
     },
-    'showcaseContent': {
+    'showcase-content': {
         type: 'end',
         path: './pages/showcase/',
     },

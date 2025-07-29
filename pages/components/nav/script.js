@@ -35,6 +35,10 @@ const toAbout = () => {
     pageRouter.loadPage('about');
 }
 
+const toSiteMap = () => {
+    pageRouter.loadPage('site-map');
+}
+
 export default {
     init:() => {
         DOMCache.root = document.querySelector('aside');
@@ -55,6 +59,7 @@ export default {
         viewCars.addEventListener('click', toCarList);
         exitApp.addEventListener('click', toStart);
         about.addEventListener('click', toAbout);
+        siteMap.addEventListener('click', toSiteMap);
     },
     teardown: () => {
 

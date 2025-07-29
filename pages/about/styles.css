@@ -5,7 +5,7 @@
 }
 
 #about-content .grid-item {
-    grid-column: 2 / span 11;
+    grid-column: 2 / span 10;
     margin-block: 40px;
 }
 

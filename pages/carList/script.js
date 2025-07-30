@@ -3,6 +3,7 @@ import carList from '../../data/carsList.js';
 import carCard from "../components/carCard.js";
 import selectOption from "../components/selectOption.js";
 import emptyBrandCard from "../components/emptyBrandCard.js";
+import emptyCarCard from "../components/emptyCarCard.js";
 
 let DOMCache = {
     root: null,
@@ -101,16 +102,18 @@ const fillCarsCards = () => {
     const { activeBrand, filters } = pageData;
     const { activeCars } = filters;
 
-    const { brandsClrs, background } = activeBrand;
-    const cleanCarList = clearCarList();
+    const { background } = activeBrand;
+    const cleanList = clearCarList();
 
     const cars = activeCars.filter(([ name, car ]) => car.getBrand().name === activeBrand.name);
 
     cars.forEach(([ name, car ]) => {
         const { cover } = car.getImages();
         const card = carCard(car, name, cover, background);
-        cleanCarList.append(card);
+        cleanList.append(card);
     })
+
+    if (!cleanList.children.length) cleanList.append(emptyCarCard());
 }
 
 const applyFilters = () => {

@@ -43,6 +43,7 @@
   /* Text colors */
   --text: oklab(0.18 0.01 -0.01);         /* dark charcoal */
   --text-light: oklab(0.95 0 0);          /* soft white */
+  --text-subtitle: oklab(from var(--text) calc(l + 0.33) a b);
 
   /* Status colors */
   --success: oklab(0.7 -0.1 0.18);        /* mint green (≈ oklch 70% 0.16 145) */

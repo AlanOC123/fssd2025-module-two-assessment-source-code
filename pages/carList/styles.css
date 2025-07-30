@@ -131,7 +131,8 @@
         top: auto;
     }
 
-    .brand-card {
+    .brand-card,
+    .empty-card {
         max-width: 80%;
     }
 }
@@ -141,46 +142,95 @@
     flex-direction: column;
     align-items: center;
     gap: var(--space-xl-fluid);
+    min-height: 90dvh;
     max-height: 90dvh;
-    height: 100%;
     overflow-y: auto;
     scroll-snap-type: y proximity;
     padding-inline: var(--space-unit-abs);
     padding-block: var(--space-unit-fluid);
 }
 
-.brand-card {
+#brand-card-list .brand-card,
+.empty-card {
     scroll-margin-block: var(--space-unit-fluid);
     scroll-snap-align: start;
     flex: 1;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: var(--space-unit-fluid);
     padding: var(--space-unit-abs);
-    border-radius: var(--radius-base);
+    border-radius: var(--radius-sm);
     width: 100%;
-    max-width: 200px;
-    max-height: 400px;
-    min-height: 200px;
     box-shadow: var(--shadow-light);
     overflow: hidden;
 }
 
+#brand-card-list .empty-card,
+#car-cards .empty-card {
+    flex-direction: column;
+}
+
+.brand-card {
+    max-width: 300px;
+    max-height: 100px;
+    min-height: 125px;
+}
+
+.empty-card {
+    width: 90%;
+    gap: var(--space-lg-fluid);
+    padding: var(--space-sm-fluid);
+}
+
+.empty-card-message-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-lg-fluid);
+}
+
+.empty-card-message-container h3 {
+    color: var(--text-subtitle);
+    text-align: center;
+}
+
+.empty-card-button-container button {
+    border-radius: var(--radius-sm);
+    padding: var(--space-sm-abs);
+    border: var(--border-thin) var(--text) solid;
+    transition: var(--duration-md) var(--ease-base);
+    cursor: pointer;
+}
+
+.empty-card-button-container button:hover {
+    background-color: var(--accent-3);
+}
+
 .brand-logo-container {
+    flex: 2;
     background-color: var(--bg-60);
-    border-radius: var(--radius-base);
+    border-radius: var(--radius-sm);
     overflow: hidden;
-    aspect-ratio: 1/1;
     display: flex;
     justify-content: center;
     align-items: center;
+    aspect-ratio: 1/1;
+}
+
+.brand-card img {
+    object-fit: cover;
+    object-position: center;
 }
 
 .brand-card:hover img {
     transition: transform var(--duration-md) var(--ease-base);
-    transform: scale(1.2);
+    transform: scale(1.05);
+}
+
+.brand-name-container {
+    flex: 3;
 }
 
 .brand-name-container h3 {

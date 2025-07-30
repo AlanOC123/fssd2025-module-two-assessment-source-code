@@ -7,7 +7,7 @@
 }
 
 #about-content .grid-item {
-    grid-column: 2 / span 10;
+    grid-column: 4 / span 6;
     margin-block: 40px;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .content-container h2 {
-    color: oklab(from var(--text) calc(l + 0.33) a b);
+    color: var(--text-subtitle);
 }
 
 .content-container p {

@@ -1,6 +1,6 @@
 import navigationScript from '../nav/script.js'
 
-const DOMCache = {
+let DOMCache = {
     root: null,
     controlButton: null,
 }
@@ -30,6 +30,9 @@ export default {
         setSectionIndicator();
     },
     teardown: () => {
-        DOMCache.controlButton = null;
+        DOMCache = {
+            root: null,
+            controlButton: null,
+        }
     }
 }

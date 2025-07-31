@@ -1,4 +1,3 @@
-import { getLightnessFromHex } from '../../helpers/getLightnessFromHex.js';
 import galleryCard from '../components/galleryCard.js';
 import performanceCard from '../components/performanceCard.js';
 import specificationsTableRow from '../components/specificationsTableRow.js';

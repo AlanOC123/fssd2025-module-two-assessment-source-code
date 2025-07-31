@@ -1,6 +1,6 @@
 import pageRouter from '../../../pageRouter.js';
 
-const DOMCache = {
+let DOMCache = {
     root: null,
     navigation: null,
 
@@ -62,7 +62,19 @@ export default {
         siteMap.addEventListener('click', toSiteMap);
     },
     teardown: () => {
+        DOMCache = {
+            root: null,
+            navigation: null,
 
+            navButtons: {
+                closeNav: null,
+                featuredCars: null,
+                viewCars: null,
+                about: null,
+                siteMap: null,
+                exitApp: null,
+            }
+        }
     },
     toggleNavigation
 }

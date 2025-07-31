@@ -303,7 +303,6 @@ const handleSpecificationsIntersect = (isIntersecting) => {
 
     if (isIntersecting) {
         tableRows.forEach((el, ind) => {
-            console.log(el)
             el.style.animationDelay = `calc(var(--delay-md) * ${ind})`;
             el.classList.add('animate');
         })
@@ -457,7 +456,6 @@ export default {
         DOMCache.gallery.galleryCards = document.getElementsByClassName('gallery-card');
         DOMCache.performance.counterWindows = document.getElementsByClassName('counter-window');
         DOMCache.specifications.tableRows = document.querySelectorAll('tr');
-        console.log(document.querySelectorAll('tr'))
 
         observerManager.connect();
     },

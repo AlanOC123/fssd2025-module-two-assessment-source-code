@@ -486,9 +486,6 @@ const processFilters = (e) => {
     const selectedBrands = processSelectOptions(brand.options);
     const selectedDriveSystems = processSelectOptions(driveSystem.options);
 
-    console.log(selectedBrands);
-    console.log(selectedDriveSystems);
-
     const [ minVal, maxVal ] = [min, max].map(el => el.value);
 
     for (let i = 0; i < selectedBrands.length; i++) {

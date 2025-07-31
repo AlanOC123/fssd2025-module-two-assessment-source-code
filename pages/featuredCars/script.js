@@ -143,8 +143,6 @@ const fillFeaturedCarList = () => {
 
     featuredCars = getIndicesArray(carsList.length).map(i => carsList[i]);
 
-    console.log(featuredCars);
-
     const nodes = featuredCars.map(car => {
         const { cover: coverPath } = car.getImages();
         const { logoPath, brandClrs } = car.getBrand();

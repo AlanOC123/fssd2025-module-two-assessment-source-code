@@ -9,7 +9,7 @@ const DOMCache = {
 const navigateAway = (e) => {
     const map = {
         'site-map-to-start': () => pageRouter.loadPage('start'),
-        'site-map-to-featured-cars': () => pageRouter.loadPage('showcase'),
+        'site-map-to-featured-cars': () => pageRouter.loadPage('featured-cars'),
         'site-map-to-view-car': () => {
             const car = carList[Math.floor(Math.random() * carList.length)];
             viewCarPageScript.viewManager.setCurr(car);

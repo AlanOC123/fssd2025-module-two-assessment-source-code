@@ -11,13 +11,13 @@ const router = {
             { key: 'script', order: 2 },
         ]
     },
-    'showcase': {
+    'featured-cars': {
         type: 'ref',
         components: [
             { key: 'root', order: 1 },
             { key: 'nav', order: 2 },
             { key: 'header', order: 3 },
-            { key: 'showcaseContent', order: 4 },
+            { key: 'featuredCarsContent', order: 4 },
             { key: 'footer', order: 5 },
             { key: 'script', order: 6 }
         ]
@@ -70,9 +70,9 @@ const router = {
         type: 'end',
         path: './pages/start/',
     },
-    'showcaseContent': {
+    'featuredCarsContent': {
         type: 'end',
-        path: './pages/showcase/',
+        path: './pages/featuredCars/',
     },
     'view-car-content': {
         type: 'end',

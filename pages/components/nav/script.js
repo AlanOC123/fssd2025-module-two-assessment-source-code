@@ -20,7 +20,7 @@ const toggleNavigation = () => {
 }
 
 const toFeaturedCars = () => {
-    pageRouter.loadPage('showcase');
+    pageRouter.loadPage('featured-cars');
 }
 
 const toStart = () => {

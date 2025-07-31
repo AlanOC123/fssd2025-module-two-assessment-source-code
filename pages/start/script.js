@@ -85,7 +85,7 @@ export default {
         intervalManager.start(crossFade);
 
         DOMCache.startButton.addEventListener('click', () => {
-            pageRouter.loadPage('showcase');
+            pageRouter.loadPage('featured-cars');
         });
     },
     teardown: () => {

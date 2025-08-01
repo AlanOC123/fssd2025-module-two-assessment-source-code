@@ -7,7 +7,7 @@ let DOMCache = {
 
 const setSectionIndicator = () => {
     const map = {
-        'showcase': 'Featured Cars',
+        'featured-cars': 'Featured Cars',
         'car-list': 'Explore Cars',
         'about': 'About',
         'view-car': 'View Car',

@@ -14,7 +14,7 @@ const setSectionIndicator = () => {
         'site-map': 'Site Map'
     }
 
-    const { root, currentSectionIndicator } = DOMCache;
+    const { root, currentSectionIndicator } = DOMCach;
     const { id } = root;
     currentSectionIndicator.textContent = map[id];
 }
